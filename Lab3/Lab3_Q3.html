@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lab3_Q3</title>
+	<link rel="stylesheet" type="text/css" href="Lab3.Q3.css">
+</head>
+<body>
+	<h1 class="topic">Sliding Puzzle</h1>
+
+<div id ="container">
+	<div class="piece" id="p0" onclick="movepiece(0)" onmouseover="colorChange(0)" onmouseout="noColor(0)"></div>
+	<div class="piece" id="p1" onclick="movepiece(0)" onmouseover="colorChange(0)" onmouseout="noColor(0)"></div>
+	<div class="piece" id="p2" onclick="movepiece(0)" onmouseover="colorChange(0)" onmouseout="noColor(0)"></div>
+	<div class="piece" id="p3" onclick="movepiece(0)" onmouseover="colorChange(0)" onmouseout="noColor(0)"></div>
+	<div class="piece" id="p4" onclick="movepiece(0)" onmouseover="colorChange(0)" onmouseout="noColor(0)"></div>
+	<div class="piece" id="p5" onclick="movepiece(0)" onmouseover="colorChange(0)" onmouseout="noColor(0)"></div>
+	<div class="piece" id="p6" onclick="movepiece(0)" onmouseover="colorChange(0)" onmouseout="noColor(0)"></div>
+	<div class="piece" id="p7" onclick="movepiece(0)" onmouseover="colorChange(0)" onmouseout="noColor(0)"></div>
+	<div class="piece" id="p8" onclick="movepiece(0)" onmouseover="colorChange(0)" onmouseout="noColor(0)"></div>
+
+	<div id="information">
+		<p id="moves">Move: 0 </p>
+		<p id="start">Starting Time: 00.00.00 </p>
+		<p id="end">Ending Time: 00.00.00 </p>
+	</div>
+
+	<button id="restart" onclick=""> Restart Game</button>
+
+	<script type="text/javascript">
+		
+		var board = document.getElementById("pattern");
+		var pieces = [];
+			pieces[0] = document.getElementById("p0");
+			pieces[1] = document.getElementbyId("p1");
+			pieces[2] = document.getElementbyId("p2");
+			pieces[3] = document.getElementbyId("p3");
+			pieces[4] = document.getElementbyId("p4");
+			pieces[5] = document.getElementbyId("p5");
+			pieces[6] = document.getElementbyId("p6");
+			pieces[7] = document.getElementbyId("p7");
+			pieces[8] = document.getElementbyId("p8");
+
+		var moves = document.getElementbyId("moves");
+		var counts = 0;
+		var times = document.getElememntbyId("start");
+
+		value();
+		times();
+
+		function value(){
+			var arr = [1,2,3,4,5,6,7,8,""];
+			var rand = [];
+			var randIndex;
+			var i = 8;
+			while (i >= 0){
+				randIndex = Math.floor(Math.random() * (i + 1));
+				pieces[i].innerHTML = var arr[randIndex];
+				arr.splice(randIndex,1);
+				i--;
+			}
+		}
+
+		function count(){
+			count++;
+			moves.innerHTML = "moves:" + count;
+		}
+
+		function resetCount(){
+			count = 0;
+			move.innerHTML = "moves:" + count;
+		}
+
+		function times (){
+			var hours = new Date();
+			var minutes = new Date();
+			var secounds = new Date();
+
+			start.innerHTML = hours.getHours() + ":" + minutes.getMinutes() + ":" + secondlgetSeconds();
+		}
+
+		function boardMove (){
+			var top;
+			var bottom;
+			var right;
+			var left;
+
+
+		}
+
+	</script>
+
+
+
+
+</body>
+</html>
